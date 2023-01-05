@@ -23,6 +23,10 @@ repos:
           - '--args=--only=terraform_required_providers'
           - '--args=--only=terraform_standard_module_structure'
           - '--args=--only=terraform_workspace_remote'
+      -id: terrascan
+       pass_filenames: false
+       args: [-l=infra] #NOTE: this command should point to the directory containing your .tf files
+       verbose: true
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
