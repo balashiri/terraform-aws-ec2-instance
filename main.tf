@@ -39,7 +39,7 @@ resource "aws_instance" "this" {
   iam_instance_profile = var.create_iam_instance_profile ? aws_iam_instance_profile.this[0].name : var.iam_instance_profile
 
   associate_public_ip_address = var.associate_public_ip_address
-  private_ip                  = var.private_ip
+  #private_ip                  = var.private_ip
   secondary_private_ips       = var.secondary_private_ips
   ipv6_address_count          = var.ipv6_address_count
   ipv6_addresses              = var.ipv6_addresses
